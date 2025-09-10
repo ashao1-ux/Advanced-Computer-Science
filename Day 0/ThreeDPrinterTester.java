@@ -6,6 +6,7 @@ public class ThreeDPrinterTester {
         Printer1.print();
         Printer1.paint();
         Printer1.on();
+        System.out.println(Printer1.toString());
 
     }
 

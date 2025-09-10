@@ -32,9 +32,51 @@ public class ThreeDPrinter { //Defines a class, instructions for item
     //  System.out.println("Not enough " + brand + "!!")
     //}
     // == is a boolean returns true or false
-    
+    public String getColor() {
+        return color;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+    public void setFixed(boolean fixed) {
+        this.fixed = fixed;
+    }
+    public void setNumberOfMagazines(int numberOfMagazines) {
+        this.numberOfMagazines = numberOfMagazines;
+    }
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+    public void setSizeInCubicFeed(int sizeInCubicFeed) {
+        this.sizeInCubicFeed = sizeInCubicFeed;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    public int getNumberOfMagazines() {
+        return numberOfMagazines;
+    }
+    public String getType() {
+        return type;
+    }
+    public int getCost() {
+        return cost;
+    }
+    public double getWeight() {
+        return weight;
+    }
+    public int getSizeInCubicFeed() {
+        return sizeInCubicFeed;
+    }
+
     public void paint() { //void for no returned value, otherwise, name what type of data is returned. ex. String, float, double, char, etc.
-        color = "Red"; //method body - instructions for what the method should do can use parameter variables
+        color = "red"; //method body - instructions for what the method should do can use parameter variables
         System.out.println("The color of my printer is " + color);
     }
     public void print() {
@@ -50,5 +92,16 @@ public class ThreeDPrinter { //Defines a class, instructions for item
     public void on() {
         on = true;
         System.out.println("Your printer is turned on");
+    }
+    public String toString() {
+        return "The color is " + color + ". The weight is " + weight + ". The cost is " + cost
+        + ". The type of printer is " + type + ".";
+    }
+    public boolean equals(ThreeDPrinter other) {
+        if (this.cost == other.cost && this.weight == other.weight 
+            && this.color.equals(other.color) && this.type.equals(other.type)) {
+                return true;
+            }
+        return false;
     }
 }

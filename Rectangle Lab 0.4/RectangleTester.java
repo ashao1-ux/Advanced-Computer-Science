@@ -1,7 +1,7 @@
 public class RectangleTester {
     public static void main() {
-        Rectangle rect = new Rectangle(5, 10);
-        Rectangle rect2 = new Rectangle(5, 11);
+        Rectangle rect = new Rectangle(5, 10, 0, 0);
+        Rectangle rect2 = new Rectangle(5, 11, 0, 0);
         System.out.println(rect.toString());
         System.out.println(rect2.toString());
         rect.setLength(4);
@@ -22,6 +22,8 @@ public class RectangleTester {
             + ".");
         System.out.println("The length of this rectangle's diagonal is " + rect2.getDiagonal() 
             + ".");
-
+        System.out.println(rect.coords());
+        rect.rotation(90, 0, 0);
+        System.out.println(rect.coords());
     }
 }
