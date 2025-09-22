@@ -16,9 +16,9 @@ public class Student {
     }
 
     public String generateId() {
-        int first = (int) (Math.random() * 7 + 1);
-        int second = (int) (Math.random() * 7 + 1);
-        int third = (int) (Math.random() * 7 + 1);
+        int first = (int) (Math.random() * 8 + 1);
+        int second = (int) (Math.random() * 8 + 1);
+        int third = (int) (Math.random() * 8 + 1);
         int four = (int) (Math.random() * 9);
         int five = (int) (Math.random() * 9);
         int six = (int) (Math.random() * 9);
