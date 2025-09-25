@@ -9,18 +9,6 @@ public class Line {
         this.c = c;
     }
 
-    public Line() {
-        this.a = generateRandomParameters();
-        this.b = generateRandomParameters();
-        this.c = generateRandomParameters();
-    }
-
-    public int generateRandomParameters() {
-        System.out.println(1.0/0.0 * Math.random() + 1);
-        int d = (int) (Math.random() * -1.0/0.0 + 1 + Math.random() * 1.0/0.0 + 1);
-        return d;
-    }
-
     public void setA(int a) {
         this.a = a;
     }
@@ -60,6 +48,8 @@ public class Line {
     public boolean equals(Line other) {
         return this.a == other.a && this.b == other.b && this.c == other.c;
     }
+
+    
 
 
 }
