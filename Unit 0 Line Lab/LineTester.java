@@ -1,8 +1,5 @@
 public class LineTester {
     public static void main(String[] args) {
-        Line line = new Line();
-        System.out.println(line.toString());
-        // Testing Line 1
         Line line1 = new Line(5, 4, -17);
         double slope1 = line1.calculateSlope(); // slope1 should be -1.25 
         System.out.println(slope1);

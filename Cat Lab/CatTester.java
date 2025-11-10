@@ -1,7 +1,7 @@
 public class CatTester {
     public static void main(String[] args) {
-        Cat myCat = new Cat("Betsy", "Tabby"); //1. new object
-        Cat otherCat = new Cat("Tiger Beast", "Tabby"); //2. new object
+        Cats myCat = new Cats("Betsy", "Tabby"); //1. new object
+        Cats otherCat = new Cats("Tiger Beast", "Tabby"); //2. new object
         System.out.println(myCat.toString());
         System.out.println("My Cat's Name: " + myCat.getName()); //3. Print string
 

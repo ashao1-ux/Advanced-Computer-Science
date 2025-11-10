@@ -1,11 +1,11 @@
-public class Cat {     //1. lowercase public, name class after file, Cat
+public class Cats {     //1. lowercase public, name class after file, Cat
 	private String name;
 	private String breed;
 	private boolean isHungry;
 	private int livesRemaining;
 	
 	// 2-Parameter Constructor
-	public Cat(String name, String breed) { //2. added parameters breed and 3. constructor class
+	public Cats(String name, String breed) { //2. added parameters breed and 3. constructor class
 		this.name = name;   //4. used this to refer to current class variable
 		this.breed = breed;      //5. used this to refer to current class variable
 		this.isHungry = true;    //6. ishungry must be boolean
@@ -49,7 +49,7 @@ public class Cat {     //1. lowercase public, name class after file, Cat
 		this.isHungry = false;
 	}
 
-	public boolean equals(Cat other) {
+	public boolean equals(Cats other) {
 		return this.name.equals(other.name) && this.breed.equals(other.breed) // 10. name is string
 			&& this.livesRemaining == other.livesRemaining; //10. double equals
 	}
