@@ -7,11 +7,12 @@ public class Player {
     }
 
     public void setChoice(String choice) {
-        choice = choice.toLowerCase();
-        if (choice.equals("rock") || choice.equals("paper") || choice.equals("scissors")) {
-            this.choice = choice;
+        String lowerChoice = choice.toLowerCase();
+        if (lowerChoice.equals("rock") || lowerChoice.equals("paper") || lowerChoice.equals("scissors")) {
+            this.choice = lowerChoice;
+        } else {
+            this.choice = RPSGame.generateRandomChoice();
         }
-        this.choice = RPSGame.generateRandomChoice();
     }
 
     public String getName() {

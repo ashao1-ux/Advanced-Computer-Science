@@ -40,8 +40,9 @@ public class RPSGame {
             }
         }
         if (! validateChoice(playerChoice)) {
-            setPlayerValues(playerName, RPSGame.generateRandomChoice())
-            System.out.println("0 remaining attempts, random choice will be assigned: " + RPSGame.generateRandomChoice());
+            String randomChoice = RPSGame.generateRandomChoice();
+            System.out.println("0 remaining attempts, random choice will be assigned: " + randomChoice);
+            setPlayerValues(playerName, randomChoice);
         }    
             
     }
@@ -77,25 +78,26 @@ public class RPSGame {
        return "Opponent won! \nBetter luck next time!";
     }
 
-    public String displayRsults() {
-        return "== GAME RESULTS ==\n" + player.getName() + " chose " + player.getChoice() + "."
-            + "\nOpponent chose " + opponent.getChoice() + "." + didPlayerWin();
+    public String displayResults() {
+        return "\n== GAME RESULTS ==\n" + player.getName() + " chose " + player.getChoice() + "."
+            + "\nOpponent chose " + opponent.getChoice() + ". \n" + toString();
     }
 
     public static boolean validateChoice(String choice) {
-        choice = choice.toLowerCase();
         if (choice.equals("rock") || choice.equals("paper") || choice.equals("scissors")) {
             return true;
         }
         return false;
     }
 
-    public static generateRandomChoice() {
-        int random = (int) (Math.)
+    public static String generateRandomChoice() {
+        int random = (int) (Math.random() * 3 + 1);
         if (random == 1) {
-
+            return "paper";
         } else if (random == 2) {
+            return "rock";
         }
-        re
+        return "scissors";
+        
     }
 }
